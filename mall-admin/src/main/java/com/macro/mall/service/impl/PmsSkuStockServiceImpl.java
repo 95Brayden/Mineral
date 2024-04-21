@@ -1,0 +1,21 @@
+package com.macro.mall.service.impl;
+
+import com.macro.mall.dao.PmsSkuStockDao;
+import com.macro.mall.mapper.PmsSkuStockMapper;
+import com.macro.mall.model.PmsSkuStock;
+import com.macro.mall.model.PmsSkuStockExample;
+import com.macro.mall.service.PmsSkuStockService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
+import java.util.List;
+
+/**
+ * 商品sku库存管理Service实现类
+ * Created by macro on 2018/4/27.
+ */
+@Service
+public class PmsSkuStockServiceImpl  {
+
+}
