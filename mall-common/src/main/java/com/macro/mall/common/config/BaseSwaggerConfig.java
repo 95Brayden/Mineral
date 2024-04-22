@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 
 /**
  * Swagger基础配置
- * Created by macro on 2020/7/16.
+ * Created by qx on 2024/4/22.
  */
 public abstract class BaseSwaggerConfig {
     @Bean
