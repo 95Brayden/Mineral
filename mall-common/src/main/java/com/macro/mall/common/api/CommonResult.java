@@ -5,6 +5,7 @@ import lombok.Setter;
 
 /**
  * 通用返回对象
+<<<<<<< Updated upstream
  * Created by mxh on 2024/4/22.
  */
 public class CommonResult<T> {
@@ -102,5 +103,24 @@ public class CommonResult<T> {
     public static <T> CommonResult<T> forbidden(T data) {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
+=======
+ * Created by hsh on 2024/4/22.
+ */
+public class CommonResult<T> {
+    private long code;
+    private String message;
+    private T data;
+>>>>>>> Stashed changes
 
+    protected CommonResult() {
+    }
+
+    protected CommonResult(long code, String message, T data) {
+        this.code = code;
+        this.message = message;
+        this.data = data;
+    }
+    public static <T> CommonResult<T> forbidden(T data) {
+        return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+    }
 }

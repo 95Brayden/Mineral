@@ -14,6 +14,11 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 public class UserDto {
-
+    private Long id;
+    private String username;
+    private String password;
+    private Integer status;
+    private String clientId;
+    private List<String> roles;
 
 }

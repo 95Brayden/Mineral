@@ -18,9 +18,19 @@ import java.nio.charset.Charset;
 
 /**
  * 自定义无权限访问的返回结果
- * Created by macro on 2018/4/26.
+ * Created by hsh on 2024/4/22.
  */
 @Component
-public class RestfulAccessDeniedHandler  {
-
+public class RestfulAccessDeniedHandler implements ServerAccessDeniedHandler {
+    @Override
+    public Mono<Void> handle(ServerWebExchange exchange, AccessDeniedException denied) {
+        ServerHttpResponse response = exchange.getResponse();
+        response.setStatusCode(HttpStatus.OK);
+        response.getHeaders().set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
+        response.getHeaders().set("Access-Control-Allow-Origin","*");
+        response.getHeaders().set("Cache-Control","no-cache");
+        String body= JSONUtil.toJsonStr(CommonResult.forbidden(denied.getMessage()));
+        DataBuffer buffer =  response.bufferFactory().wrap(body.getBytes(Charset.forName("UTF-8")));
+        return response.writeWith(Mono.just(buffer));
+    }
 }
