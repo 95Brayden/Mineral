@@ -22,10 +22,8 @@ import java.time.Duration;
 
 /**
  * Redis基础配置
- * Created by macro on 2020/6/19.
+ * Created by mxh on 2024/4/22.
  */
 public class BaseRedisConfig {
-
-
-
+    
 }
