@@ -25,5 +25,5 @@ import java.time.Duration;
  * Created by mxh on 2024/4/22.
  */
 public class BaseRedisConfig {
-    
+
 }
