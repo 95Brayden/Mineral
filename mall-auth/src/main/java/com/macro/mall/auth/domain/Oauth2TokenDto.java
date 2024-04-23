@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 
 /**
  * Oauth2获取Token返回信息封装
- * Created by macro on 2020/7/17.
+ * Created by mxh on 2024/4/22.
  */
 
 public class Oauth2TokenDto {
