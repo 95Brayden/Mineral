@@ -15,9 +15,20 @@ import java.util.List;
 
 /**
  * 收货地址管理Controller
- * Created by macro on 2018/10/18.
+ * Created by qx on 2024/4/23.
  */
-
+@Controller
+@Api(tags = "OmsCompanyAddressController", description = "收货地址管理")
+@RequestMapping("/companyAddress")
 public class OmsCompanyAddressController {
+    @Autowired
+    private OmsCompanyAddressService companyAddressService;
 
+    @ApiOperation("获取所有收货地址")
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ResponseBody
+    public CommonResult<List<OmsCompanyAddress>> list() {
+        List<OmsCompanyAddress> companyAddressList = companyAddressService.list();
+        return CommonResult.success(companyAddressList);
+    }
 }

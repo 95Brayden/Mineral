@@ -8,9 +8,24 @@ import java.util.List;
 
 /**
  * Minio Bucket访问策略配置
- * Created by macro on 2020/8/11.
+ * Created by qx on 2021/4/23.
  */
-
+@Data
+@EqualsAndHashCode(callSuper = false)
+@Builder
 public class BucketPolicyConfigDto {
 
+    private String Version;
+    private List<Statement> Statement;
+
+    @Data
+    @EqualsAndHashCode(callSuper = false)
+    @Builder
+    public static class Statement {
+        private String Effect;
+        private String Principal;
+        private String Action;
+        private String Resource;
+
+    }
 }
