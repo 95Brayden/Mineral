@@ -105,7 +105,7 @@ public class CommonResult<T> {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
 
-<<<<<<< Updated upstream
+
     public long getCode() {
         return code;
     }
@@ -129,6 +129,5 @@ public class CommonResult<T> {
     public void setData(T data) {
         this.data = data;
     }
-=======
->>>>>>> Stashed changes
+
 }
