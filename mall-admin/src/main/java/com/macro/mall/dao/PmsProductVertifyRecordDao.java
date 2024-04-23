@@ -7,8 +7,11 @@ import java.util.List;
 
 /**
  * 自定义商品审核日志管理Dao
- * Created by macro on 2018/4/27.
+ * Created by qx on 2024/4/23.
  */
 public interface PmsProductVertifyRecordDao {
-   
+    /**
+     * 批量创建
+     */
+    int insertList(@Param("list") List<PmsProductVertifyRecord> list);
 }
