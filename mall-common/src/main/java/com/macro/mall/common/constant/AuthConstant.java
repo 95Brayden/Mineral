@@ -2,7 +2,7 @@ package com.macro.mall.common.constant;
 
 /**
  * 权限相关常量定义
- * Created by macro on 2020/6/19.
+ * Created by hsh on 2024/4/23.
  */
 public interface AuthConstant {
 

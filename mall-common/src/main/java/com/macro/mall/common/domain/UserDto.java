@@ -8,7 +8,7 @@ import java.util.List;
 
 /**
  * 登录用户信息
- * Created by macro on 2020/6/19.
+ * Created by hsh on 2024/4/22.
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

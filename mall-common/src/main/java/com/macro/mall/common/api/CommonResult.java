@@ -1,20 +1,14 @@
 package com.macro.mall.common.api;
 
-import lombok.Getter;
-import lombok.Setter;
-
 /**
  * 通用返回对象
-<<<<<<< Updated upstream
- * Created by mxh on 2024/4/22.
+ * Created by hsh and mxh on 2019/4/19.
  */
 public class CommonResult<T> {
-    @Setter @Getter
     private long code;
-    @Setter @Getter
     private String message;
-    @Setter @Getter
     private T data;
+
     protected CommonResult() {
     }
 
@@ -103,24 +97,28 @@ public class CommonResult<T> {
     public static <T> CommonResult<T> forbidden(T data) {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
-=======
- * Created by hsh on 2024/4/22.
- */
-public class CommonResult<T> {
-    private long code;
-    private String message;
-    private T data;
->>>>>>> Stashed changes
 
-    protected CommonResult() {
+    public long getCode() {
+        return code;
     }
 
-    protected CommonResult(long code, String message, T data) {
+    public void setCode(long code) {
         this.code = code;
-        this.message = message;
-        this.data = data;
     }
-    public static <T> CommonResult<T> forbidden(T data) {
-        return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public void setData(T data) {
+        this.data = data;
     }
 }
