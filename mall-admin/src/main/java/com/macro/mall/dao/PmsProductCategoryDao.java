@@ -6,8 +6,11 @@ import java.util.List;
 
 /**
  * 商品分类自定义Dao
- * Created by macro on 2018/5/25.
+ * Created by qx on 2024/4/23.
  */
 public interface PmsProductCategoryDao {
-
+    /**
+     * 获取商品分类及其子分类
+     */
+    List<PmsProductCategoryWithChildrenItem> listWithChildren();
 }
