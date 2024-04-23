@@ -15,6 +15,21 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 public class SwaggerConfig extends BaseSwaggerConfig {
 
+    @Override
+    public SwaggerProperties swaggerProperties() {
+        return SwaggerProperties.builder()
+                .apiBasePackage("com.macro.mall.demo.controller")
+                .title("mall-demo系统")
+                .description("SpringCloud版本中的一些示例")
+                .contactName("macro")
+                .version("1.0")
+                .enableSecurity(true)
+                .build();
+    }
 
+    @Bean
+    public BeanPostProcessor springfoxHandlerProviderBeanPostProcessor() {
+        return generateBeanPostProcessor();
+    }
 
 }

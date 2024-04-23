@@ -14,11 +14,22 @@ import java.util.Map;
 
 /**
  * 获取RSA公钥接口
- * Created by macro on 2020/6/19.
+ * Created by mxh on 2024/4/23.
  */
 
+@RestController
+@Api(tags = "KeyPairController", description = "获取RSA公钥接口")
+@RequestMapping("/rsa")
 public class KeyPairController {
 
+    @Autowired
+    private KeyPair keyPair;
 
+    @GetMapping("/publicKey")
+    public Map<String, Object> getKey() {
+        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
+        RSAKey key = new RSAKey.Builder(publicKey).build();
+        return new JWKSet(key).toJSONObject();
+    }
 
 }
