@@ -42,7 +42,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             e.printStackTrace();
         }
         return chain.filter(exchange);
-    }
+    }//将JWT的信息解析并添加到头Header中
 
     @Override
     public int getOrder() {
