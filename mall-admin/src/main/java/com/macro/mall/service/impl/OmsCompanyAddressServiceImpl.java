@@ -11,9 +11,14 @@ import java.util.List;
 
 /**
  * 收货地址管理Service实现类
- * Created by macro on 2018/10/18.
+ * Created by qx on 2024/4/23.
  */
-
-public class OmsCompanyAddressServiceImpl  {
-
+@Service
+public class OmsCompanyAddressServiceImpl implements OmsCompanyAddressService {
+    @Autowired
+    private OmsCompanyAddressMapper companyAddressMapper;
+    @Override
+    public List<OmsCompanyAddress> list() {
+        return companyAddressMapper.selectByExample(new OmsCompanyAddressExample());
+    }
 }
