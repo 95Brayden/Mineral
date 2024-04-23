@@ -11,9 +11,15 @@ import java.util.List;
 
 /**
  * 商品优选管理Service实现类
- * Created by macro on 2018/6/1.
+ * Created by qx on 2024/4/23.
  */
+@Service
+public class CmsPrefrenceAreaServiceImpl  implements CmsPrefrenceAreaService{
+    @Autowired
+    private CmsPrefrenceAreaMapper prefrenceAreaMapper;
 
-public class CmsPrefrenceAreaServiceImpl  {
-
+    @Override
+    public List<CmsPrefrenceArea> listAll() {
+        return prefrenceAreaMapper.selectByExample(new CmsPrefrenceAreaExample());
+    }
 }
