@@ -7,8 +7,11 @@ import java.util.List;
 
 /**
  * 自定义商品属性Dao
- * Created by macro on 2018/5/23.
+ * Created by qx on 2024/4/23.
  */
 public interface PmsProductAttributeDao {
-
+    /**
+     * 获取商品属性信息
+     */
+    List<ProductAttrInfo> getProductAttrInfo(@Param("id") Long productCategoryId);
 }
