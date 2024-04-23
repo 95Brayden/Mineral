@@ -11,11 +11,9 @@ import java.util.Collection;
 
 /**
  * 登录用户信息
- * Created by macro on 2020/6/19.
+ * Created by mxh on 2024/4/22.
  */
 
 public class SecurityUser  {
-
-
 
 }

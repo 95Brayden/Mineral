@@ -12,10 +12,12 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * redis操作实现类
+<<<<<<< Updated upstream
  *
  * @author mxh
  * @date 2024/4/22
  */
+
 @Service
 public class RedisServiceImpl implements RedisService {
     @Autowired

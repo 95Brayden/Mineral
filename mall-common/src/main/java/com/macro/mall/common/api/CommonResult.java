@@ -2,7 +2,14 @@ package com.macro.mall.common.api;
 
 /**
  * 通用返回对象
+<<<<<<< Updated upstream
  * Created by hsh and mxh on 2019/4/19.
+=======
+<<<<<<< Updated upstream
+ *
+ * @author mxh
+ * @date 2024/4/22
+>>>>>>> Stashed changes
  */
 public class CommonResult<T> {
     private long code;
@@ -98,6 +105,7 @@ public class CommonResult<T> {
         return new CommonResult<T>(ResultCode.FORBIDDEN.getCode(), ResultCode.FORBIDDEN.getMessage(), data);
     }
 
+<<<<<<< Updated upstream
     public long getCode() {
         return code;
     }
@@ -121,4 +129,6 @@ public class CommonResult<T> {
     public void setData(T data) {
         this.data = data;
     }
+=======
+>>>>>>> Stashed changes
 }
