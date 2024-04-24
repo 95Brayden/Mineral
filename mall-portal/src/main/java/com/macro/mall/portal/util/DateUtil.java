@@ -5,9 +5,34 @@ import java.util.Date;
 
 /**
  * 日期工具类
- * Created by macro on 2019/1/29.
+ *
+ * @author mxh
+ * @date 2024/4/24
  */
 public class DateUtil {
-
+    /**
+     * 从Date类型的时间中提取日期部分
+     * 即2024-04-24 14:30:45 ->2024-04-24 00:00:00
+     */
+    public static Date getDate(Date date){
+        Calendar calendar=Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.HOUR_OF_DAY,0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
+    }
+    /**
+     * 从Date类型的时间中提取时间部分
+     * 即2024-04-24 14:30:45 ->1970-00-01 14:30:45
+     */
+    public static Date getTime(Date date) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.set(Calendar.YEAR, 1970);
+        calendar.set(Calendar.MONTH, 0);
+        calendar.set(Calendar.DAY_OF_MONTH, 1);
+        return calendar.getTime();
+    }
 
 }
