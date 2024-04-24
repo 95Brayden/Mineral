@@ -8,8 +8,11 @@ import lombok.Setter;
 
 /**
  * 限时购及商品信息封装
- * Created by macro on 2018/11/16.
+ * Created by qx on 2024/4/24.
  */
 public class SmsFlashPromotionProduct extends SmsFlashPromotionProductRelation{
-
+    @Getter
+    @Setter
+    @ApiModelProperty("关联商品")
+    private PmsProduct product;
 }
