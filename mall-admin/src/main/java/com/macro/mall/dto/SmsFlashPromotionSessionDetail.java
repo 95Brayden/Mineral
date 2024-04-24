@@ -7,8 +7,11 @@ import lombok.Setter;
 
 /**
  * 包含商品数量的场次信息
- * Created by macro on 2018/11/19.
+ * Created by qx on 2024/4/24.
  */
 public class SmsFlashPromotionSessionDetail extends SmsFlashPromotionSession {
-
+    @Setter
+    @Getter
+    @ApiModelProperty("商品数量")
+    private Long productCount;
 }
