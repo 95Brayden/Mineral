@@ -7,8 +7,11 @@ import java.util.List;
 
 /**
  * 自定义优惠券和商品关系关系Dao
- * Created by macro on 2018/8/28.
+ * Created by qx on 2024/4/24.
  */
 public interface SmsCouponProductRelationDao {
-
+    /**
+     * 批量创建
+     */
+    int insertList(@Param("list")List<SmsCouponProductRelation> productRelationList);
 }
