@@ -5,9 +5,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * 定时任务相关配置
- * Created by macro on 2019/4/8.
+ * Created by mxh on 2024/4/24.
  */
 @Configuration
 @EnableScheduling
 public class SpringTaskConfig {
+
 }

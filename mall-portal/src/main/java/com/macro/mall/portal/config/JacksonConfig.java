@@ -12,7 +12,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 /**
  * Jackson相关配置类
  * json不返回null的字段
- * Created by macro on 2018/8/2.
+ * Created by mxh on 2024/4/24.
  */
 @Configuration
 public class JacksonConfig {
@@ -29,17 +29,6 @@ public class JacksonConfig {
         // Include.NON_NULL 属性为NULL 不序列化,就是为null的字段不参加序列化
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 
-        // 字段保留，将null值转为""
-//        objectMapper.getSerializerProvider().setNullValueSerializer(new JsonSerializer<Object>()
-//        {
-//            @Override
-//            public void serialize(Object o, JsonGenerator jsonGenerator,
-//                                  SerializerProvider serializerProvider)
-//                    throws IOException, JsonProcessingException
-//            {
-//                jsonGenerator.writeString("");
-//            }
-//        });
         return objectMapper;
     }
 }
