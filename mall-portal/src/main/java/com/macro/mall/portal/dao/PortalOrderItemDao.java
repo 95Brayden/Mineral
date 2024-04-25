@@ -7,6 +7,8 @@ import java.util.List;
 
 /**
  * 订单商品信息自定义Dao
- * Created by macro on 2018/9/3.
+ *  Created by mxh on 2024/4/25.
  */
-public interface PortalOrderItemDao {}
+public interface PortalOrderItemDao {
+    int insertList(@Param("list") List<OmsOrderItem> list);
+}
