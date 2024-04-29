@@ -7,7 +7,7 @@ import java.util.Map;
 
 /**
  * 后台资源管理Service
- * Created by macro on 2020/2/2.
+ * Created by hsh on 2024/4/29.
  */
 public interface UmsResourceService {
     /**
