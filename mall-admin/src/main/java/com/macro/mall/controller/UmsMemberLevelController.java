@@ -1,5 +1,4 @@
 package com.macro.mall.controller;
-
 import com.macro.mall.common.api.CommonResult;
 import com.macro.mall.model.UmsMemberLevel;
 import com.macro.mall.service.UmsMemberLevelService;
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.List;
 
 /**
