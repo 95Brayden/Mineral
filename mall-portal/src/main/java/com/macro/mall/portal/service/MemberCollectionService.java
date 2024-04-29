@@ -7,7 +7,16 @@ import java.util.List;
 
 /**
  * 会员收藏Service
- * Created by macro on 2018/8/2.
+ * Created by mxh on 2024/4/25.
  */
 public interface MemberCollectionService {
+    int add(MemberProductCollection productCollection);
+
+    int delete(Long productId);
+
+    Page<MemberProductCollection> list(Integer pageNum, Integer pageSize);
+
+    MemberProductCollection detail(Long productId);
+
+    void clear();
 }
