@@ -16,9 +16,20 @@ import java.util.List;
 
 /**
  * 会员等级管理Controller
- * Created by macro on 2018/4/26.
+ * Created by hsh on 2024/4/29.
  */
-
+@Controller
+@Api(tags = "UmsMemberLevelController", description = "会员等级管理")
+@RequestMapping("/memberLevel")
 public class UmsMemberLevelController {
+    @Autowired
+    private UmsMemberLevelService memberLevelService;
 
+    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @ApiOperation("查询所有会员等级")
+    @ResponseBody
+    public CommonResult<List<UmsMemberLevel>> list(@RequestParam("defaultStatus") Integer defaultStatus) {
+        List<UmsMemberLevel> memberLevelList = memberLevelService.list(defaultStatus);
+        return CommonResult.success(memberLevelList);
+    }
 }

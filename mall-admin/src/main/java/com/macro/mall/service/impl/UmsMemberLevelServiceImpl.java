@@ -14,6 +14,13 @@ import java.util.List;
  * Created by macro on 2018/4/26.
  */
 @Service
-public class UmsMemberLevelServiceImpl {
-
+public class UmsMemberLevelServiceImpl implements UmsMemberLevelService{
+    @Autowired
+    private UmsMemberLevelMapper memberLevelMapper;
+    @Override
+    public List<UmsMemberLevel> list(Integer defaultStatus) {
+        UmsMemberLevelExample example = new UmsMemberLevelExample();
+        example.createCriteria().andDefaultStatusEqualTo(defaultStatus);
+        return memberLevelMapper.selectByExample(example);
+    }
 }
