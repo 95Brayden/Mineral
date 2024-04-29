@@ -12,8 +12,34 @@ import java.util.List;
 
 /**
  * 后台资源分类管理Service实现类
- * Created by macro on 2020/2/5.
+ * Created by macro on 2024/4/29.
  */
 @Service
-public class UmsResourceCategoryServiceImpl {
+public class UmsResourceCategoryServiceImpl implements UmsResourceCategoryService {
+    @Autowired
+    private UmsResourceCategoryMapper resourceCategoryMapper;
+
+    @Override
+    public List<UmsResourceCategory> listAll() {
+        UmsResourceCategoryExample example = new UmsResourceCategoryExample();
+        example.setOrderByClause("sort desc");
+        return resourceCategoryMapper.selectByExample(example);
+    }
+
+    @Override
+    public int create(UmsResourceCategory umsResourceCategory) {
+        umsResourceCategory.setCreateTime(new Date());
+        return resourceCategoryMapper.insert(umsResourceCategory);
+    }
+
+    @Override
+    public int update(Long id, UmsResourceCategory umsResourceCategory) {
+        umsResourceCategory.setId(id);
+        return resourceCategoryMapper.updateByPrimaryKeySelective(umsResourceCategory);
+    }
+
+    @Override
+    public int delete(Long id) {
+        return resourceCategoryMapper.deleteByPrimaryKey(id);
+    }
 }
