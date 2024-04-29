@@ -9,7 +9,12 @@ import java.util.Map;
 
 /**
  * 认证服务远程调用
- * Created by macro on 2020/7/19.
+ * Created by mxh on 2024/4/25.
  */
 @FeignClient("mall-auth")
-public interface AuthService {}
+public interface AuthService {
+
+    @PostMapping(value = "/oauth/token")
+    CommonResult getAccessToken(@RequestParam Map<String, String> parameters);
+
+}
