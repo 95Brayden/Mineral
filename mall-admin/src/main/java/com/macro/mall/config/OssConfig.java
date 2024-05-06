@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * OSS对象存储相关配置
- * Created by macro on 2018/5/17.
+ * Created by qx on 2024/5/6.
  */
 @Configuration
 public class OssConfig {
