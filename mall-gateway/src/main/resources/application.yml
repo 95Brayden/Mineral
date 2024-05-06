@@ -49,8 +49,8 @@ spring:
   redis:
     database: 0
     port: 6379
-    host: localhost
-    password:
+    host: 8.148.22.188
+    password: 515515
 secure:
   ignore:
     urls: #配置白名单路径
