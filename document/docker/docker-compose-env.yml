@@ -10,8 +10,8 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - /mydata/mysql/data/db:/var/lib/mysql #数据文件挂载
-      - /mydata/mysql/data/conf:/etc/mysql/conf.d #配置文件挂载
+      - /mydata/mysql/data:/var/lib/mysql #数据文件挂载
+      - /mydata/mysql/conf:/etc/mysql #配置文件挂载
       - /mydata/mysql/log:/var/log/mysql #日志文件挂载
   redis:
     image: redis:7
@@ -25,24 +25,22 @@ services:
     image: nginx:1.22
     container_name: nginx
     volumes:
-      - /mydata/nginx/conf:/etc/nginx #配置文件挂载
+      - /mydata/nginx/conf:/etc/nginx #配置文件目录挂载
       - /mydata/nginx/html:/usr/share/nginx/html #静态资源根目录挂载
-      - /mydata/nginx/log:/var/log/nginx #日志文件挂载
+      - /mydata/nginx/logs:/var/log/nginx #日志文件挂载
     ports:
       - 80:80
   rabbitmq:
-    image: rabbitmq:3.9-management
+    image: rabbitmq:3.9.11-management
     container_name: rabbitmq
     volumes:
       - /mydata/rabbitmq/data:/var/lib/rabbitmq #数据文件挂载
-      - /mydata/rabbitmq/log:/var/log/rabbitmq #日志文件挂载
     ports:
       - 5672:5672
       - 15672:15672
   elasticsearch:
     image: elasticsearch:7.17.3
     container_name: elasticsearch
-    user: root
     environment:
       - "cluster.name=elasticsearch" #设置集群名称为elasticsearch
       - "discovery.type=single-node" #以单一节点模式启动
@@ -87,10 +85,15 @@ services:
       - /mydata/mongo/db:/data/db #数据文件挂载
     ports:
       - 27017:27017
-  nacos-registry:
-    image: nacos/nacos-server:v2.1.0
-    container_name: nacos-registry
+  minio:
+    image: minio/minio
+    container_name: minio
+    command: server /data --console-address ":9001" #指定数据目录及console运行端口启动
+    volumes:
+      - /mydata/minio/data:/data #数据目录挂载
     environment:
-      - "MODE=standalone"
+      - "MINIO_ROOT_USER=minioadmin"
+      - "MINIO_ROOT_PASSWORD=minioadmin"
     ports:
-      - 8848:8848
+      - 9090:9000
+      - 9001:9001

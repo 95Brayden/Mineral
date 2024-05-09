@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://db:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://db:3306/mineral?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: root
   data:
@@ -12,7 +12,7 @@ spring:
     host: redis # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
-    password: #不设置密码
+    password: 515515 #不设置密码
   rabbitmq:
     host: rabbit
     port: 5672
@@ -33,6 +33,6 @@ alipay:
   appId: your appId
   alipayPublicKey: your alipayPublicKey
   appPrivateKey: your appPrivateKey
-  returnUrl: http://192.168.3.101:8060/#/pages/money/paySuccess
+  returnUrl: http://8.148.22.188:8060/#/pages/money/paySuccess
   notifyUrl:
 

@@ -5,7 +5,7 @@ spring:
     password: root
   data:
     mongodb:
-      host: 47.95.8.64
+      host: 8.148.22.188
       port: 27017
       database: Mineral
   redis:
