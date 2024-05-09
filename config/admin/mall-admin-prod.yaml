@@ -21,7 +21,7 @@ spring:
     port: 6379 # Redis服务器连接端口
     password: 515515 #不设置密码
 minio:
-  endpoint: http://8.148.22.188:9090 #MinIO服务所在地址
+  endpoint: http://47.95.8.64:9090 #MinIO服务所在地址
   bucketName: mineral #存储桶名称
   accessKey: minioadmin #访问的key
   secretKey: minioadmin #访问的秘钥
