@@ -5,7 +5,7 @@ spring:
     pathmatch:
       matching-strategy: ant_path_matcher
   datasource:
-    url: jdbc:mysql://8.148.22.188:3306/mineral?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
+    url: jdbc:mysql://47.99.95.4:3306/mineral?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: root
     druid:
@@ -19,17 +19,17 @@ spring:
         login-password: druid
   data:
     mongodb:
-      host: 8.148.22.188
+      host: 47.99.95.4
       port: 27017
       database: Mineral
   redis:
-    host: 8.148.22.188 # Redis服务器地址
+    host: 47.99.95.4 # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 515515 # Redis服务器连接密码（默认为空）
     timeout: 3000ms # 连接超时时间（毫秒）
   rabbitmq:
-    host: 8.148.22.188
+    host: 47.99.95.4
     port: 5672
     virtual-host: /mall
     username: mall

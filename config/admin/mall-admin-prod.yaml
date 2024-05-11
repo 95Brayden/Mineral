@@ -7,7 +7,7 @@ aliyun:
     policy:
       expire: 300 # 签名有效期(S)
     maxSize: 10 # 上传文件大小(M)
-    callback: http://8.148.22.188:8080/aliyun/oss/callback # 文件上传成功后的回调地址
+    callback: http://47.99.95.4:8080/aliyun/oss/callback # 文件上传成功后的回调地址
     dir:
       prefix: mall/images/ # 上传文件夹路径前缀
 spring:
@@ -16,7 +16,7 @@ spring:
     username: root
     password: root
   redis:
-    host: 8.148.22.188 # Redis服务器地址
+    host: 47.99.95.4 # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 515515 #不设置密码

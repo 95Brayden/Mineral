@@ -33,6 +33,6 @@ alipay:
   appId: your appId
   alipayPublicKey: your alipayPublicKey
   appPrivateKey: your appPrivateKey
-  returnUrl: http://8.148.22.188:8060/#/pages/money/paySuccess
+  returnUrl: http://47.99.95.4:8060/#/pages/money/paySuccess
   notifyUrl:
 
